@@ -50,3 +50,4 @@ Thumbs.db
 
 storage
 yarn.lock
+.env

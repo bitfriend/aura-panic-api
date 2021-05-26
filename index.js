@@ -1,10 +1,11 @@
 'use strict';
 
+require('dotenv').config();
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
-  host: '192.168.1.113',
-  port: 5050
+  host: process.env.HOST,
+  port: process.env.PORT
 });
 
 server.route({
