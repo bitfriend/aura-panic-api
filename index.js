@@ -5,7 +5,12 @@ const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
   host: process.env.HOST,
-  port: process.env.PORT
+  port: process.env.PORT,
+  routes: {
+    cors: {
+      origin: ['*'] // an array of origins or 'ignore'
+    }
+  }
 });
 
 server.route({
